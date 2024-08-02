@@ -1,0 +1,176 @@
+canvas {
+    border-bottom: 0px solid lightgray;
+    border-left: 0px solid lightgray;
+    border-right: 0px solid lightgray;
+    width: 100%;
+    margin-top: 0;
+    cursor: default;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 632px;
+    margin: auto;
+    border-bottom: 2px solid lightgray;
+    border-left: 2px solid lightgray;
+    border-right: 2px solid lightgray;
+}
+
+.button-container {
+    display: block;
+    margin: auto;
+    font-size: 0;
+}
+
+.button,
+.custom-file-upload {
+    background-color: #333;
+    border: 1px solid grey;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    color: white;
+    width: 37px;
+    height: 37px;
+    margin-top: 0px;
+    cursor: pointer;
+}
+
+.custom-file-upload {
+    padding: 24px 10px 11px 12px;
+}
+
+.custom-file-upload:hover,
+.custom-file-upload:focus {
+    border-color: white;
+    outline: none;
+}
+
+.button:hover,
+.button:focus {
+    border-color: white;
+    outline: none;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.btn-secondary {
+    background: lightgrey;
+    color: black;
+    margin-top: 1rem;
+}
+
+.order {
+    border: none;
+    padding: 10px 10px;
+}
+
+#context-menu {
+    position: fixed;
+    z-index: 10000;
+    width: 150px;
+    background: #1b1a1a;
+    border-radius: 5px;
+    transform: scale(0);
+    transform-origin: top left;
+    display: none;
+}
+
+#context-menu.visible {
+    display: block;
+    transform: scale(1);
+}
+
+#context-menu .item {
+    padding: 8px 10px;
+    font-size: 15px;
+    color: #eee;
+    cursor: pointer;
+    border-radius: inherit;
+}
+
+#context-menu .item:hover {
+    background: #343434;
+}
+
+#context-menu.visible {
+    transform: scale(1);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a,
+.file-upload {
+    float: left;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    padding: 14px 10px;
+    text-decoration: none;
+    border-left: 1px solid grey;
+    cursor: pointer;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 10px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    border-left: 1px solid lightgrey;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn,
+.file-upload:hover {
+    background-color: darkgrey;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

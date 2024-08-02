@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Chemistry Drawing</h2>
+        <div class="navbar">
+            <a onclick='startDraw()'  id="button-draw"><img src="assets/svg/draw.svg" /> Draw</a>
+            <a onclick='clearCanvas()'><img src="assets/svg/clear-all.svg" /> Clear All</a>
+            <a onclick='select()' id="button-select"><img src="assets/svg/select.svg" /> Select</a>
+            <div class="dropdown">
+              <button class="dropbtn"><img src="assets/svg/hexagon.svg" /> Rings
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a onclick='addTriangle()'><img src="assets/svg/triangle-dark.svg" /> Triangle</a>
+                <a onclick='addRect()'><img src="assets/svg/rectangle-dark.svg" /> Square</a>
+                <a onclick='addPent()'><img src="assets/svg/pentagon-dark.svg" /> Pentagon</a>
+                <a onclick='addHex()'><img src="assets/svg/hexagon-dark.svg" /> Hexagon</a>
+              </div>
+            </div> 
+            <div class="dropdown">
+                <button class="dropbtn"><img src="assets/svg/double-bond.svg" /> Bonds 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a onclick='addSingle()'><img src="assets/svg/single-bond-dark.svg" /> Single</a>
+                  <a onclick='addDouble()'><img src="assets/svg/double-bond-dark.svg" /> Double</a>
+                  <a onclick='addTriple()'><img src="assets/svg/triple-bond-dark.svg" /> Triple</a>
+                  <a onclick='addWedge()'><img src="assets/svg/wedge-dark.svg" /> Wedge</a>
+                  <a onclick='addWedgeDash()'><img src="assets/svg/wedge-dash-dark.svg" /> Wedge-Dash</a>
+                </div>
+              </div>
+              <a onclick='addText()'><img src="assets/svg/text.svg" /> Text</a>
+              <input id="filereader" type="file" accept="image/*" /> 
+            <label for="filereader" class="file-upload" title="Upload Image">
+                <img src="assets/svg/image.svg" /> Image
+            </label>
+        
+          </div>
+           
+        <div class="button-container" id="button-container" style="display:none">
+          
+            <button id="button-save" class="btn btn-secondary" onclick='saveCanvas()' style="display:none;">Save</button>
+
+            <input id="filereader" type="file" accept="image/*" />
+
+            <label for="filereader" class="btn btn-secondary">
+               Upload
+            </label>
+
+
+        </div>
+
+        <canvas id="a" width="597px" height="500"></canvas>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.6.7/fabric.js" async defer></script>
+    <script src="js/main.js" async defer></script>
+    <script src="js/events.js" async defer></script>
+
+</body>
+
+</html>
